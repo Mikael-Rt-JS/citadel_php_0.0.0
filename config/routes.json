@@ -1,0 +1,26 @@
+{
+    "/foryourbusiness": {
+        "GET": {
+            "ctrl": "HomeCtrl",
+            "method": "index"
+        }
+    },
+	"/foryourbusiness/home": {
+        "GET": {
+            "ctrl": "HomeCtrl",
+            "method": "index"
+        }
+    },
+    "/foryourbusiness/about": {
+        "GET": {
+            "ctrl": "AboutCtrl",
+            "method": "index"
+        }
+    },
+    "/foryourbusiness/contact": {
+        "GET": {
+            "ctrl": "ContactCtrl",
+            "method": "index"
+        }
+    }
+}

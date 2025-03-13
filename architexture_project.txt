@@ -1,0 +1,102 @@
+/project-root
+│── /public          # Статические файлы (css, js, images)
+│── /config          # Настройки (ini, json и т.д.)
+│── /database        # Подключение к БД, миграции
+│── /routes          # Файлы маршрутов
+│── /citadel         # Основной код приложения (раньше src)
+│   │── /controllers # Контроллеры (логика работы)
+│   │── /db          # Модели (раньше models, работа с БД)
+│   │── /views       # Шаблоны страниц
+│── /core (или /system)  # Классы ядра (роутер, автозагрузчик, helpers)
+│── index.php        # Главный файл входа
+
+MY MINI-FRAMEWORK
+/project-root
+│── /citadel         # Основной код приложения (раньше src)
+│   │── /ctrl # Контроллеры (логика работы)
+│   │── /db          # Модели (раньше models, работа с БД)
+│   │── /views       # Шаблоны страниц
+│── /static          # Статические файлы (css, js, images)
+│	│── audio
+│	│── css
+│	│── csv
+│	│── icons
+│	│── images
+│	│── js
+│	│── json
+│	│── pdf
+│	│── rar
+│	│── uploader
+│	│── videos
+│	│── zip
+│── /config          # Настройки (ini, json и т.д.)
+│── /database      	 # Подключение к БД, миграции
+│── /routes          # Файлы маршрутов
+│── /system (или /core)  # Классы ядра (роутер, автозагрузчик, helpers)
+│── index.php        # Главный файл входа
+
+
+JSON
+{
+    "/home": {
+        "GET": {
+            "controller": "HomeController",
+            "method": "index"
+        },
+        "POST": {
+            "controller": "HomeController",
+            "method": "create"
+        },
+        "PUT": {
+            "controller": "HomeController",
+            "method": "update"
+        },
+        "DELETE": {
+            "controller": "HomeController",
+            "method": "del"
+        }
+    },
+    "/about": {
+        "GET": {
+            "controller": "AboutController",
+            "method": "read"
+        }
+    },
+    "/contact": {
+        "GET": {
+            "controller": "ContactController",
+            "method": "read"
+        },
+        "POST": {
+            "controller": "ContactController",
+            "method": "create"
+        }
+    }
+}
+
+{
+    "/foryourbusiness": {
+        "GET": {
+            "controller": "HomeController",
+            "method": "index"
+        }
+    },
+	"/foryourbusiness/home": {
+        "GET": {
+            "controller": "HomeController",
+            "method": "index"
+        }
+    },
+    "/foryourbusiness/about": {
+        "GET": {
+            "controller": "AboutController",
+            "method": "read"
+        }
+    },
+    "/foryourbusiness/contact": {
+        "GET": {
+            "controller": "ContactController",
+            "method": "read"
+        }
+    }
+}

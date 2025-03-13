@@ -1,0 +1,89 @@
+// =======================================  XAMPP
+phpMyAdmin: http://localhost/phpmyadmin/
+Default sait: http://localhost/dashboard/
+
+// ======================================= REPL
+codes:
+https://replit.com/@mikaelgevorgyan/catchrequest#index.php
+views:
+https://f33dd3b4-5ece-46b2-ae9d-b7e941a18829-00-25wi78uquvuo.spock.replit.dev/
+
+
+// ======================================= PROJECT NOW 13.03.2025
+http://localhost/foryourbusiness/
+
+http://localhost/foryourbusiness/home
+http://localhost/foryourbusiness/about
+
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+http://localhost/foryourbusiness/
+
+// ======================================= ВСЯКИЕ РЕСУРСЫ ИСПОЛЬЗОВАЛ
+https://evepics.wordpress.com/2024/04/05/palatine-keepstar-on-singularity/
+https://www.google.com/search?q=eve+online+citadel+%D0%BE%D0%B1%D0%BE%D0%B8+zarzakh&sca_esv=ee3395f8cbb9de9c&rlz=1C1GCEA_enAM1034AM1034&udm=2&biw=1920&bih=919&sxsrf=AHTn8zo_6aw6qyj9kxvTlVsbBX2mDzey3A%3A1741858648201&ei=WKfSZ6rwC8asxc8PlM6DgAU&ved=0ahUKEwiq_OWP4YaMAxVGVvEDHRTnAFAQ4dUDCBE&uact=5&oq=eve+online+citadel+%D0%BE%D0%B1%D0%BE%D0%B8+zarzakh&gs_lp=EgNpbWciI2V2ZSBvbmxpbmUgY2l0YWRlbCDQvtCx0L7QuCB6YXJ6YWtoSLQvUPMJWNkqcAN4AJABAJgBtwGgAasLqgEEMC4xMLgBA8gBAPgBAZgCAKACAJgDAIgGAZIHAKAHwQU&sclient=img#vhid=jLVgt9G8e7tHBM&vssid=mosaic
+https://eve-online-com.ru/mediateka/oboi/azariel
+
+// ======================================= ПУТИ ВНУТРИ КОНТРОЛЛЕРОВ + [views,...]
+include './citadel/views/home.php';
+
+// ======================================= ПУТИ ВНУТРИ ШАБЛОНОВ + [PHP,CSS,IMAGES,JS,...]
+require_once __DIR__.'/global/doctype_open.php';
+<?= $this->title;?>
+<?= $this->test(); ?>
+require_once __DIR__.'/global/doctype_close.php';
+
+href="./static/css/globals/reset.css"
+
+src="./static/images/azariel-titan-wallpaper-3840px.jpg"
+
+src="./static/js/index.js"
+
+// ======================================= ПОДКЛЮЧЕНИЕ К БАЗЕ ДАННЫМ ПРОШЛА УСПЕШНО 
+// ======================================= НА СТРОКАХ  37-39 index.php 1.
+
+		$query = $connection->query('SELECT * FROM test');
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+		var_dump($rows);
+		
+// ======================================= В КОНТРОЛЛЕРЕ  37-39 HomeCtrl.php 1.2
+class HomeCtrl {
+	public $title='CITADEL MINI-FRAMEWORK';
+	
+    public function index() {
+		global $connection;
+		$query = $connection->query('SELECT * FROM test');
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+		var_dump($rows);
+		
+        // echo "GET - Главная страница";
+		
+		// переходим к представлению
+		include './citadel/views/home.php';
+    }
+
+// ======================================= В КОНТРОЛЛЕРЕ  37-39 HomeCtrl.php + home.php1.3
+class HomeCtrl {
+	public $title='CITADEL MINI-FRAMEWORK';
+	
+    public function index() {
+		global $connection;
+		$query = $connection->query('SELECT * FROM test');
+		$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+		
+        // echo "GET - Главная страница";
+		
+		// переходим к представлению
+		include './citadel/views/home.php';
+    }
+	
+	<section>
+		<h3><?= $rows[0]["name"]; ?></p>
+		<small><?= $rows[0]["signup_date"]; ?></small>
+		<?php var_dump($rows); ?>
+	</section>
